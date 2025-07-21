@@ -39,10 +39,15 @@ This repository contains a complete MLOps pipeline implementation including:
 
 | Metric | Original Sklearn Model | Quantized Model |
 |--------|----------------------|-----------------|
+
+| R² Score | TBD | TBD |
+| Model Size | TBD KB | TBD KB |
+
 | R² Score | 0.5758 | -0.1976 |
 | Model Size | 0.44 KB | 0.60 KB |
 
 **Note**: The quantized model shows degraded performance due to aggressive 8-bit quantization. This demonstrates the trade-off between model size and accuracy in quantization techniques.
+
 
 ## Docker Usage
 ```bash
@@ -51,6 +56,7 @@ docker build -t mlops-pipeline .
 
 # Run the container
 docker run mlops-pipeline python src/predict.py
+
 ```
 
 ## Assignment Implementation Details
@@ -93,3 +99,4 @@ docker run mlops-pipeline python src/predict.py
 - Container verification with model inference
 - Docker Hub deployment (configured with secrets)
 - Comprehensive error handling and logging
+
